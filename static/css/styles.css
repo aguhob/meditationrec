@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+.img {width:100%;}
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    cursor: pointer;
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+    background-color: #333;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display: block;
+}
+
+
+body {
+  background-color: red;
+  color: aliceblue;
+  font-family: sans-serif;
+  font-size: 30px;
+  margin: 100;
+  padding: 100;
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.3);
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: 1000px;
+    padding: 2em 2em 1px;
+}
+           
+        
+#chakras dd {
+    display: none;
+    font-size: 16px;
+}
+
+#chakras dt {
+    font-size: 14px;
+    
+}
+
+/* visibility: hidden for accordian a space */
+
+/* find way to turn mouse into pointer */
+
+#chakras dd { 
+    cursor: pointer; 
+    text-align: center
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+.one {
+  background-color: #FF0000;
+  grid-column: 1 / 3;
+  grid-row: 1;
+}
+.two { 
+  background-color: #FF0000;
+  grid-column: 2 / 4;
+  grid-row: 1 / 3;
+}
+.three {
+  grid-column: 1;
+  grid-row: 2 / 5;
+}
+.four {
+  grid-column: 3;
+  grid-row: 3;
+}
+.five {
+  grid-column: 2;
+  grid-row: 4;
+}
+.six {
+  grid-column: 3;
+  grid-row: 4;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+p {
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    font-weight: 200;
+    line-height: 1.3;
+    display: block;
+    }
+
+h1 {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 50px;
+    color: white;
+    margin: 0px;
+    text-align: center;
+    vertical-align: middle;    
+    }
+
+h2 {
+    font-family: 'Noto Sans SC', sans-serif;
+    color: white;
+    margin-top: 1.3em;
+    text-align: center;
+    }
+
+h3, h4, h5, h6 {
+    font-family: 'Noto Sans SC', sans-serif;
+    color: white;
+    text-align: center;
+    font-weight: 200;
+    line-height: 1.3;
+    }
+
+/* Everything before the media queries gets
+applied to screen sizes greater than 960 pixels */
+
+/*****************/
+/* MEDIA QUERIES */
+/*****************/
+
+/* Tablet Screen Sizes */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+}
+
+/* Mobile Landscape Screen Sizes */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+}
+/* Mobile Portrate Screen Sizes */
+@media only screen and (max-width: 479px) {
+
+}
+
+/* Tablet Screen Sizes */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+/* Resize the body */
+body {min-width:767px;}
+
+/* Resize the row */
+.row {width:767px;}
+
+/* Resize the columns */
+.col_12 {width:748px;}
+.col_9 {width:492px;}
+.col_8 {width:556px;}
+.col_6 {width:364px;}
+.col_4 {width:172px;}
+.col_3 {width:236px;}
+
+}
+
+/* Mobile Landscape Screen Sizes */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+/* Resize the body */
+body {min-width:479px;}
+
+/* Resize the row */
+.row {width:479px;}
+
+/* Resize the columns */
+.col_12 {width:460px;}
+.col_9 {width:225px;}
+.col_8 {width:225px;}
+.col_6 {width:225px;}
+.col_4 {width:225px; margin-left:0px;}
+.col_3 {width:225px; margin-left:0px;}
+
+/* Fix the .last issue */
+.last {
+margin-left:0;
+margin-right:10px;
+}
+
+}
+
+/* Mobile Portrait Screen Sizes */
+@media only screen and (max-width: 479px) {
+
+/* Resize the body */
+body {min-width:320px;}
+
+/* Resize the row */
+.row {width:320px;}
+
+/* Resize the columns */
+.col_12 {width:300px;}
+.col_9 {width:300px;}
+.col_8 {width:300px;}
+.col_6 {width:300px;}
+.col_4 {width:300px; margin-left:0px;}
+.col_3 {width:300px; margin-left:0px;}
+
+/* Fix the .last issue */
+.last {
+margin-left:0;
+margin-right:10px;
+}
+}

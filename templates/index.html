@@ -1,0 +1,72 @@
+<!doctype html>
+
+<!-- this is practice.html -->
+
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.3.1.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="http://localhost:3000/socket.io/socket.io.js"></script>
+</head>
+<body>
+    
+<div class="container">
+    <br />        
+    <div class="jumbotron">
+        <h1 class="display-4"> Recommender</h1>
+        <h5 class="display-6" >Share your experience, and get advice.</h5>
+        <br />
+        <p>In your practice, what are:</p>
+        <ul> 
+            <li><em>Distinct characteristics</em> of your sit?</li> 
+            <li><em>Specific techniques</em> you use?</li> 
+            <li><em>Challenges</em> you want to overcome?</li> 
+            <li><em>Transition points</em> you have completed?</li>
+        </ul>
+        
+            
+        <p>Information about Stages <a href="stage.html">here.</a></p>
+        <br />
+        <input id="name" class="form-control" placeholder="Indicate approximate Stage (1-10)">
+        <br />
+        <textarea id="message" class="form-control" placeholder="Describe your practice per above"></textarea>
+        <br />
+        <button id="send" class="btn btn-success">Submit</button>
+    </div>
+    <div id="messages">   
+    </div>
+</div>
+    
+</body>        
+<script>
+    var socket = io()
+    $(()=> {
+        $("#send").click(()=>{
+            var message = { name: $("#name").val(), message: $("#message").val()}
+            postMessage(message)
+            // addMessages({name: 'Stage 1', message: 'It has been tough.'})   
+        })
+        getMessages()
+    })
+    
+    socket.on('message', addMessages)
+    
+    function addMessages(message){
+        $("#messages").append(`<h4> ${message.name} </h4> <p> ${message.message} </p>` )
+    }
+    
+    function getMessages(){
+        $.get('http://localhost:3000/messages', (data)=>{
+            data.forEach(addMessages);
+        })
+    }
+
+    function postMessage(message){
+        $.post('http://localhost:3000/messages', message)
+    }
+
+</script>
+    
+</html>
