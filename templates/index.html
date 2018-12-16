@@ -2,61 +2,137 @@
 
 {% block content %}
 
+    <div class="body">    
     
-<div class="container">
-    <br />        
-    <div class="jumbotron">
-        <h1 class="display-4"> Recommender</h1>
-        <h5 class="display-6" >Share your experience, and get advice.</h5>
+<div class="navbar">
+  
+    <div class="dropdown">    
+    <button class="dropbtn" onclick="myFunction()">Info
+      <i class="fa fa-caret-down"></i>
+    </button>
+    
+        <div class="dropdown-content" id="myDropdown">
+            <a href="https://www.amazon.com/Mind-Illuminated-Meditation-Integrating-Mindfulness/dp/1501156985">Book</a>
+            <a href="https://www.consciouslifestylemag.com/ten-stages-of-meditation-complete-guide">Article</a>
+            <a href="https://dharmatreasure.org/wp-content/uploads/LightOnMeditationHandout.pdf">Handout</a>
+        </div>
+    </div>
+    
+    <div class="dropdown">
+    <button class="dropbtn" onclick="myFunction2()">Practice Engine
+      <i class="fa fa-caret-down"></i>
+    </button>
+      
+        <div class="dropdown-content" id="myDropdown2">
+            <a href="https://dharmatreasure.org/wp-content/uploads/LightOnMeditationHandout.pdf">Stage Details</a>
+            <a href="practice.html">Recommender</a>
+        </div>
+     </div> 
+</div>    
+    
+<!-- <div class="one"> -->
+<br />
+    
+<div class="container" id="main">
+        <h1 style="text-align: center">The Stages of Meditation <br> (Culadasa)</h1>
+
         <br />
-        <p>In your practice, what are:</p>
-        <ul> 
-            <li><em>Distinct characteristics</em> of your sit?</li> 
-            <li><em>Specific techniques</em> you use?</li> 
-            <li><em>Challenges</em> you want to overcome?</li> 
-            <li><em>Transition points</em> you have completed?</li>
-        </ul>
+        <img src="img/person.png" alt="<3" id="logo">
         
-            
-        <p>Information about Stages <a href="stage.html">here.</a></p>
+        <p style="text-align: center">There are 10 distinct stages of meditation.
+
         <br />
-        <input id="name" class="form-control" placeholder="Indicate approximate Stage (1-10)">
+        
+    
+        <p style="text-align: center"> Each stage of meditation has its own distinct characteristics, challenges to overcome, and specific techniques for working through those challenges. The Stages mark gradual improvements in your abilities.
+        
+        <p style="text-align: center">
+            There are also Four Milestone Achievements that divide the Ten Stages of meditation into four distinct parts. These are significant transition points that take your meditation to a whole new level.</p>
+        
+        <p style="text-align: center">
+    
+       <br />        
+</div>    
+<!-- </div>
+</div>    
+    
+<div class="two"> -->
+<div class="row">
+    <dl id="chakras">
+
+        <dt style="text-align: center"><img src="img/sahasrara1b.jpeg" alt="<3">Stage 10  </dt>
+        <dd>The mind of the meditator at this 10th stage of development is also
+known as the ‘unsurpassable’ or ‘unexcelled’ mind. <br />Because the
+state of powerful concentration, fully conscious awareness, joyfulness,
+tranquility and equanimity has not completely disappeared between
+sessions, the meditator regains the fully developed meditative state
+<br />immediately upon sitting down to practice again. <br />There is no need to
+go through any intermediate stages. Because all of these factors are
+present between meditation sessions, the meditator is capable of
+practicing the Four Applications of Mindfulness in daily life with
+amazing effectiveness.  
+        </dd>
+        
         <br />
-        <textarea id="message" class="form-control" placeholder="Describe your practice per above"></textarea>
+        
+        <dt style="text-align: center"><img src="img/ajna2b.jpeg" alt="<3">Stage 8 to 9 (Milestone 4)  </dt>
+        <dd>Stability of attention and mindful awareness are fully
+developed, accompanied by meditative joy, tranquility and
+equanimity, qualities which persist between meditation
+sessions. This is the Concentration of an Adept. 
+        </dd>
+        
         <br />
-        <button id="send" class="btn btn-success">Submit</button>
-    </div>
-    <div id="messages">   
-    </div>
+        
+        <dt style="text-align: center"><img src="img/vissudha3b.jpg" alt="&lt;3">Stage 7 (Milestone 3)  </dt>
+        <dd>Effortless stability of the attention, also known as mental
+pliancy, the compliant mind. The achievement of effortlessly sustained single-pointed
+attention marks the first stage of development of the
+Concentration of an Adept</dd>
+         <br />        
+        
+        <dt style="text-align: center"><img src="img/anahata4b.jpg" alt="<3">Stages 5 to 6 (Milestone 2) </dt>
+        <dd>Sustained single-pointed attention to the meditation object,
+with exclusive focus. Sustained single-pointed attention constitutes the mastery of
+Skilled Concentration.</dd>
+        
+        <br />        
+        
+        <dt style="text-align: center"><img src="img/muladhara5b.jpg" alt="<3">Stage 3 to 4 (Milestone 1) </dt>
+        <dd>Uninterrupted continuity of attention to the meditation
+object. This marks the first stage of
+development of Skilled Concentration. The meditator is no longer
+a novice, prone to mind-wandering and falling asleep.</dd>
+         <br />       
+        
+        <dt style="text-align: center"><img src="img/svadisthana6b.jpg" alt="<3">Stage 2  </dt>
+        <dd>When, in the duration of a one-hour sit, it can consistently be said that
+the amount of time the attention has been focused on the meditation
+object is noticeably longer than the time that it has been forgotten,
+and when the typical period of sustained attention lasts minutes while
+the periods of mind-wandering last only seconds, then the meditator
+has mastered the second stage and has entered the third stage. </dd>
+         
+        <br />       
+        
+        <dt style="text-align: center"><img src="img/manipura7b.jpg" alt="<3">Stage 1 (New meditator)  </dt>
+        <dd>This stage is characterized by a difficulty in achieving consistency and
+regularity in sitting, and by meditation time often being spent doing
+something other than the practice – daydreaming, problem solving,
+etc.</dd>    
+        
+    </dl>
+</div>   
 </div>
+    
+  <script src="js/scripts.js"></script> 
+    
+    <div id="footer"></div>
 
+<br />    
+    <h6 style="text-align: center">Copyright &copy; 2018 by Minda Aguhob</h6>
+<br />
             
-<script>
-    var socket = io()
-    $(()=> {
-        $("#send").click(()=>{
-            var message = { name: $("#name").val(), message: $("#message").val()}
-            postMessage(message)
-            // addMessages({name: 'Stage 1', message: 'It has been tough.'})   
-        })
-        getMessages()
-    })
-    
-    socket.on('message', addMessages)
-    
-    function addMessages(message){
-        $("#messages").append(`<h4> ${message.name} </h4> <p> ${message.message} </p>` )
-    }
-    
-    function getMessages(){
-        $.get('http://localhost:3000/messages', (data)=>{
-            data.forEach(addMessages);
-        })
-    }
 
-    function postMessage(message){
-        $.post('http://localhost:3000/messages', message)
-    }
-
-</script>
+{% endblock %}
     

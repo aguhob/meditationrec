@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container">
+    <br />        
+    <div class="jumbotron">
+        <h1 class="display-4"> Recommender</h1>
+        <h5 class="display-6" >Share your experience, and get advice.</h5>
+        <br />
+        <p>In your practice, what are:</p>
+        <ul> 
+            <li><em>Distinct characteristics</em> of your sit?</li> 
+            <li><em>Specific techniques</em> you use?</li> 
+            <li><em>Challenges</em> you want to overcome?</li> 
+            <li><em>Transition points</em> you have completed?</li>
+        </ul>
+        
+            
+        <p>Information about Stages <a href="stage.html">here.</a></p>
+        <br />
+
+<!--
+  <main class="container signup-section">
+    <div class="section-content">
+-->
+<!--        <h2>Get a recommendation</h2>-->
+        <form method="POST" action="/rec">
+            {{ form.hidden_tag() }}
+            
+            <div class='form-group'>
+                {{ form.stage.label }}
+                
+                {% if form.stage.errors %}
+                    {% for error in form.stage.errors %}
+                        <p class="error-message">{{ error }}</p>
+                
+                    {% endfor %}
+                {% endif %}
+
+                {{ form.stage }}
+            </div>
+            
+            <div class='form-group'>
+                {{ form.description.label }}
+                
+                {% if form.stage.errors %}
+                    {% for error in form.stage.errors %}
+                        <p class="error-message">{{ error }}</p>
+                
+                    {% endfor %}
+                {% endif %}
+
+                {{ form.description }}
+            </div>
+            
+            {{ form.submit(class="btn-primary") }}
+            
+        </form>
+    </div>
+  </main>
+
+{% endblock %}
